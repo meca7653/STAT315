@@ -81,7 +81,7 @@ x: value we are interested in (in this example 2)
 
 size: n, number of Bernoulli trails (in this example 10)
 
-prob: probability of $X = 2$
+prob: probability of $X = 1$
 
 ```{r, echo=TRUE}
 n = 10
