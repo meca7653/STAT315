@@ -1,0 +1,44 @@
+---
+title: "Lesson 9"
+author: "Meng Cao"
+date: "2/5/2018"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Example: Aim:
+
+a) mean
+
+$$E[X] = \sum{x \times p(x)}$$
+
+```{r aim_mean}
+x <- c(0:5)
+y <- c(229, 211, 93, 35, 7, 1)
+p_x <- y/sum(y)
+lambda <- sum(x * p_x)
+lambda
+```
+
+b)
+
+```{r b_aim}
+p_new <- dpois(x, lambda = lambda) 
+p_new
+y_pred <- round(p_new * sum(y))
+plot(y_pred, y)
+abline(0,1)
+```
+
+
+
+
+
+
+
+
+
+
