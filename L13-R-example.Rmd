@@ -1,0 +1,56 @@
+---
+title: "Standard Normal Distribution"
+author: "Meng Cao"
+date: "2/16/2018"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+\section{Example pnorm}
+\begin{enumerate}
+\item Find $P(Z \le 1.37)$
+
+\item Find $P(Z \ge -0.82)$
+
+
+\item Find $P(-0.4 \le Z \le 0.3)$
+
+
+
+\end{enumerate}
+
+Solution:
+```{r}
+pnorm(1.37)
+```
+```{r}
+1 - pnorm(-0.82)
+```
+```{r}
+pnorm(0.3) - pnorm(-0.4)
+```
+
+\section{Example find percentile}
+\begin{enumerate}
+\item Find c such that $P(Z \le c) = 0.14$.
+\item Find the $88$th percentile of $Z$.
+\item Find the middle $92\%$ of $Z$. Find $c$ such that $P(-c \le Z \le c) = 0.92$. 
+\end{enumerate}
+
+Solution:
+```{r}
+qnorm(0.14)
+qnorm(0.88)
+qnorm((1 - 0.92)/2)
+```
+
+
+
+
+
+
+
+
+
